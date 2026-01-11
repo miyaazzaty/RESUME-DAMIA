@@ -1,0 +1,1097 @@
+/*body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    /*background: #eeb980; 
+}*/
+
+html {
+
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family:  Arial,serif; 
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.logo {
+    color: #2E2E2E;
+    font-weight: bold;
+}
+
+nav {
+    background: #665f57;
+    padding: 6px 15px;   /* ⬅️ DIKECILKAN (asal 15px) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;    /* nav kekal di atas */
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+
+.nav-left,
+.header-title,
+.menu {
+    flex: 1;
+}
+
+.menu {
+    /*list-style: none;
+    display: flex;
+    gap: 20px;
+    flex: 1;*/
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: #faf8f8;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    padding: 80px;
+    text-align: center;
+}
+
+.hero-title {
+    text-align: center; /* centers the text inside h1 */
+}
+
+.hero-row {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers the whole row */
+    gap: 150px;
+    width: 100%;
+}
+
+.hero-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px; /* you can remove if you want */
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(176, 35, 231);
+}
+
+.btn-profile {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #144b86; /* Warna biru tema Damia */
+    color: white;             /* Warna tulisan */
+    text-decoration: none;    /* Buang garis bawah pautan */
+    border-radius: 25px;      /* Buat bucu jadi bulat */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Animasi bila mouse lalu */
+    border: none;
+    cursor: pointer;
+}
+
+/* Kesan bila mouse lalu (Hover) */
+.btn-profile:hover {
+    background-color: #0d3461; /* Biru lebih gelap */
+    transform: translateY(-3px); /* Butang naik sikit */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+} 
+
+
+.container {
+    width:80%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.section-title {
+    font-size:28px;
+    color:#4b7bec;
+}
+
+.typing {
+    font-weight: bold;
+    border-right: 2px solid black;
+    padding-right: 5px;
+} 
+
+.header-title {
+    /*font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1; */
+
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu a.active {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+    padding: 40px 30px; /* inner spacing */
+    margin: 40px auto;  /* spacing from edges */
+    border-radius: 15px; /* rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* subtle shadow */
+    max-width: 1000px; /* keep content centered and readable */
+    color: #2E2E2E; /* dark text for readability */
+    position: relative; 
+    z-index: 2; /* above background/waves */
+}
+
+/*.footer {
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent dark 
+    color: #fff; /* white text 
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid rgba(255,255,255,0.2); /* subtle top border 
+}*/
+
+body { 
+    display : flex ; 
+    flex-direction : column;
+}
+/* Make main-content grow to fill space */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center secara vertical */
+    align-items: center;     /* center secara horizontal */
+    text-align: center;      /* pastikan teks center */
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 12px;
+    width : 100% ;
+    margin-top: auto;
+    border-top: 2px solid rgba(255,255,255,0.2);
+    
+}
+.menu1 {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+
+    position: absolute; /* add this */
+    top: 20px;          /* distance from top */
+    left: 100px;
+}
+
+.menu1 a {
+    color: #faf8f8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Pastikan warna tulisan kontra dengan background hero anda */
+.typing {
+    color: #06090f; /* Gunakan warna --secondary-blue anda */
+    font-weight: bold;
+    border-right: 2px solid #0d3561; /* Ini untuk efek kursor berkelip */
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+/* Animasi kursor berkelip */
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #0d3561; }
+}
+
+
+/* ni untuk project file punya*/
+
+/* Hidden Image Div */
+.project-image {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.10s ease-in-out; /* Animasi buka yang smooth */
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 500px; /* Supaya gambar tak terlalu besar memenuhkan skrin */
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-blue);
+    display: block;
+}
+
+.projects-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #7bb7ee;
+}
+
+/* ===== Project Cards ===== */
+.project-card {
+    background-color: rgba(211, 205, 121, 0.9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.project-card p {
+    line-height: 1.6;
+}
+
+/* Button */
+.view-btn {
+    margin-top: 10px;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #4b7bec, rgb(176,35,231));
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    opacity: 0.9;
+}
+
+/* Hidden Image Div */
+.project-image {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    margin-top: 10px;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* ni untuk profile punya */ 
+/* ================= ROOT THEME ================= */
+:root {
+    --primary-blue: #0d3561;
+    --secondary-blue: #4b7bec;
+    --accent-purple: rgb(176, 35, 231);
+    --text-dark: #1f2c3f;
+    --card-bg: #ffffff;
+}
+
+/* ================= WRAPPER ================= */
+.profile-wrapper {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+}
+
+/* ================= CARD (SEMUA SAMA SAIZ) ================= */
+.profile-card {
+    width: 100%;
+    background: var(--card-bg);
+    padding: 25px 30px;
+    border-radius: 14px;
+    border-left: 6px solid var(--secondary-blue);
+    box-sizing: border-box;
+}
+
+/* ================= TITLES ================= */
+.section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--secondary-blue);
+    display: inline-block;
+}
+
+/* ================= ABOUT ================= */
+.about-section p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* ================= COMMUNICATION ================= */
+.comm-item {
+    margin-bottom: 18px;
+    position: relative; 
+}
+
+.comm-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-dark);
+}
+
+.skill-bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--secondary-blue),
+        var(--accent-purple)
+    );
+    border-radius: 20px;
+}
+
+.skill-level {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    top: 50%; 
+    position: absolute;
+    right: 0; 
+    transform: translateY(-50%);
+}
+
+/* ================= TECHNICAL SKILLS ================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.skill-box {
+    background: #e2e795;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+
+/* ================= BUTTONS ================= */
+.skill-text button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--secondary-blue);
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.skill-text button:hover {
+    background: var(--primary-blue);
+}
+
+#image-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(199, 174, 174, 0.171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#image-lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+} 
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .profile-wrapper {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Gaya Utama Section */ 
+/* Ni untuk education */ 
+
+.education-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.education-wrapper {
+    padding-top: 80px;
+}
+.header-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #0e2742;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.edu-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Rekaan Kad */
+.edu-card {
+    background: #ffcdf7;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: all 0.4s ease;
+    border-bottom: 4px solid transparent;
+     margin-top: 40px;
+}
+
+.edu-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(20, 75, 134, 0.1);
+    border-bottom: 4px solid #1461b3;
+    margin-top: 40px;
+}
+
+/* Ikon */
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: #eef4fb;
+    color: #144b86;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    font-size: 1.8rem;
+}
+
+.edu-year {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #560d6d;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.edu-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #580b55;
+    line-height: 1.4;
+}
+
+.edu-card p {
+    font-size: 0.95rem;
+    color: #3a3030;
+    line-height: 1.7;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 992px) {
+    .edu-grid-container {
+        grid-template-columns: 1fr; /* Satu lajur untuk skrin kecil */
+    }
+}
+
+/* Menetapkan saiz kotak untuk logo supaya seragam */
+.img-col {
+    width: 100px; /* Tetapkan lebar kolum gambar */
+    text-align: center;
+}
+
+/* Memastikan semua logo mempunyai saiz yang sama dan cantik */
+.edu-logo-img {
+    width: 80px;         /* Lebar tetap */
+    height: 80px;        /* Tinggi tetap */
+    object-fit: contain; /* PENTING: Mengekalkan nisbah gambar supaya tidak penyet */
+    border-radius: 8px;  /* Membuat bucu sedikit bulat supaya nampak moden */
+    background-color: #fff; /* Memberi latar belakang putih jika logo transparent */
+    padding: 5px;        /* Memberi ruang dalam sedikit */
+    transition: transform 0.3s ease; /* Efek smooth apabila dihalakan tetikus */
+}
+
+/* Efek apabila tetikus lalu di atas gambar (optional) */
+.edu-logo-img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Tambahan: Memastikan jadual nampak lebih kemas */
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 120px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Container untuk Table */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Header Table */
+.edu-table th {
+    margin-bottom: 100px;
+    background-color: #144b86;
+    color: white;
+    padding: 15px 15px 25px 15px; 
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+/* Sel Table */
+.edu-table td {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+/* KESAN HOVER: Baris akan berubah warna bila mouse lalu */
+.edu-table tbody tr:hover {
+    background-color: #f8fbff;
+    transition: 0.3s;
+    cursor: default;
+}
+
+/* Gaya Gambar dalam Table */
+.edu-table-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Supaya logo tak penyek */
+    border-radius: 8px;
+    background: #f9f9f9;
+    padding: 5px;
+}
+
+/* Gaya Teks */
+.edu-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #144b86;
+}
+
+.edu-info p {
+    margin: 5px 0 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.edu-year-tag {
+    background: #eef4fb;
+    color: #144b86;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* ni untuk experience punya*/ 
+
+/* Container Utama */
+.experience-list {
+    max-width: 900px; /* Kita kecilkan sikit supaya nampak fokus di tengah */
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Jarak antara kad */
+}
+
+/* Rekaan Kad Pengalaman */
+.exp-card {
+    background: #f0e76b;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #1a5799; /* Garis biru di tepi untuk identiti */
+    box-shadow: 0 4px 10px rgba(228, 208, 93, 0.719);
+    transition: transform 0.3s ease;
+    text-align: left; /* Teks bermula dari kiri */
+}
+
+/* Kesan bila mouse lalu (hover) */
+.exp-card:hover {
+    transform: scale(1.02); /* Kad membesar sikit */
+    box-shadow: 0 6px 15px rgba(5, 15, 26, 0.1);
+}
+
+/* Gaya Tarikh */
+.exp-date {
+    font-size: 0.8rem;
+    color: #140375;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Tajuk Pekerjaan */
+.exp-card h3 {
+    font-size: 1.2rem;
+    color: #131212;
+    margin-bottom: 10px;
+}
+
+/* Huraian Kerja */
+.exp-card p {
+    font-size: 0.9rem;
+    color: #2b2727;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* Gaya Subtitle */
+.contact-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
+
+/* Container untuk Kad */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Supaya dia turun bawah kalau skrin phone */
+}
+
+
+/*ni untuk contact/*
+
+/* Gaya Setiap Kad Contact */
+.contact-item {
+    background: #c0b366;
+    padding: 25px;
+    width: 220px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #53520c;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    background: hsl(56, 100%, 72%);
+    box-shadow: 0 10px 25px rgba(20, 75, 134, 0.1);
+    border-color: #144b86;
+}
+
+/* Gaya Ikon */
+.contact-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contact-item p, .contact-item a {
+    font-size: 0.85rem;
+    color: #28232b;
+    text-decoration: none;
+    word-break: break-all; /* Supaya email panjang tak terkeluar kotak */
+}
+
+/*student information profile*/
+/* Gaya untuk kotak maklumat pelajar */
+.student-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center ; 
+    
+}
+
+.student-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover ; 
+    border: 5px solid #144b86;
+    margin-top : 40px
+    
+}
+
+.student-title {
+    color: #144b86;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.info-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.label {
+    font-weight: bold;
+    color: #144b86;
+    width: 40%;
+}
+
+.student-footer {
+    margin-top: 30px;
+}
+
+/* Menggunakan semula gaya butang yang Damia buat sebelum ini */
+.btn-profile {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #144b86;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-profile:hover {
+    background-color: #0d3461;
+    transform: translateY(-2px);
+}
+
+.footer-container{
+
+    font-size: 12px;
+}
+
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 50px;
+    background: #fff;
+    padding: 120px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Container untuk Table */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+
+/* ====================== Contact Section ====================== */
+
+/* ================= CONTACT PAGE WRAPPER ================= */
+/* Pastikan background body anda menyokong backdrop-filter blur */
+
+.contact-clean-section {
+    padding: 80px 0; /* Kurangkan padding tepi supaya container margin: auto boleh berfungsi */
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centerkan secara mendatar */
+    justify-content: center; /* Centerkan secara menegak */
+    background: rgba(255, 255, 255, 0.15); 
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: var(--text-dark);
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* ================= CONTACT CARDS CONTAINER ================= */
+
+.contact-cards-container {
+    max-width: 1000px;
+    width: 90%; /* Supaya ada ruang di kiri kanan pada skrin sederhana */
+    margin: 0 auto; /* Teknik utama untuk centerkan kotak container itu sendiri */
+    
+    display: grid;
+    /* Guna auto-fit dan centerkan grid content */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px)); 
+    justify-content: center; /* Centerkan kad-kad di dalam grid */
+    gap: 25px;
+    padding: 40px 20px;
+    
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= INDIVIDUAL CONTACT CARD ================= */
+
+.contact-item-card {
+    background: var(--card-bg);
+    padding: 35px 25px;
+    border-radius: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    
+    /* Ciri khas Profile: Border kiri biru */
+    border-left: 5px solid var(--secondary-blue);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(20,75,134,0.2);
+}
+
+/* ================= ICON BOX (Gradient Gaya Profile) ================= */
+
+.icon-box {
+    width: 65px;
+    height: 65px;
+    /* Guna gradient yang sama dengan skill-progress/button di Profile */
+    background: linear-gradient(
+        135deg,
+        var(--secondary-blue),
+        var(--accent-purple)
+    );
+    color: white;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(75, 123, 236, 0.3);
+}
+
+/* ================= CARD TEXT ================= */
+
+.contact-item-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    /* Garisan bawah seperti .section-title */
+    border-bottom: 2px solid var(--secondary-blue);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.contact-item-card p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .contact-cards-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+
+main, .main-content, .profile-wrapper, .projects-section, .education-section, .experience-list, .contact-clean-section {
+    margin-top: 80px; /* tinggi nav + sedikit ruang, adjust ikut keperluan */
+}

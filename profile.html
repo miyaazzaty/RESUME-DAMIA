@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROFILE | Nur Damia</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<div id="image-lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<body>
+
+<nav>
+
+    <div class="nav-left">
+        <img src="picture/photo_6163529587799821910_x.jpg" class="logo-img" alt="Logo">
+    </div>
+    
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="main-content">
+
+    <div class="profile-wrapper reveal">
+
+        <!-- ABOUT ME -->
+        <section class="profile-card about-section">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I am a passionate and motivated <strong>Information System Management</strong> student at UiTM Puncak Perdana. 
+                I enjoy creating visually appealing and interactive websites while constantly learning new technologies. 
+                I strive to deliver meaningful and user-friendly digital experiences.
+            </p>
+
+            <div class="about-video">
+                <video controls width="100%">
+                    <source src="video/video introduce myself.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- COMMUNICATION SKILLS -->
+       
+        <!-- TECHNICAL SKILLS -->
+        <section class="profile-card communication-section">
+    <h2 class="section-title">Communication Skills</h2>
+
+    <div class="comm-item">
+        <div class="comm-header">
+            <span>Malay</span>
+            <span class="skill-level expert">Expert</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress" style="width: 100%;"></div>
+        </div>
+    </div>
+
+    <div class="comm-item">
+        <div class="comm-header">
+            <span>ENGLISH</span>
+            <span class="skill-level intermediate">Intermediate</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress" style="width: 70%;"></div> 
+         </div>
+    </div>
+
+    <div class="comm-item">
+        <div class="comm-header">
+            <span>MANDARIN</span>
+            <span class="skill-level beginner">Beginner</span>
+        </div>
+        <div class="skill-bar"></div>
+            <div class="skill-progress" style="width:50%;" ></div>
+    </div>
+
+     <div class="profile-right">
+    <h2 class="section-title">Technical Skills</h2>
+   <div class="skills-grid">
+    <div class="skill-box">
+        <div class="skill-text">
+            <strong>HTML</strong>
+            <span class="skill-desc">
+                Structuring web content and creating the foundation of accessible websites.
+            </span>
+            <button onclick="openImage('picture/html project.jpg')">View</button>
+        </div>
+    </div>
+
+    <div class="skill-box">
+        <div class="skill-text">
+            <strong>CSS</strong>
+            <span class="skill-desc">
+                Styling and designing responsive layouts with modern animations.</span>
+            <button onclick="openImage('picture/css project.jpg')">View</button>
+        </div>
+    </div>
+
+    <div class="skill-box">
+        <div class="skill-text">
+            <strong>Web Design</strong>
+            <span class="skill-desc">
+                Focusing on UI/UX principles to create user-friendly digital interfaces.
+            </span>
+            <button onclick="openImage('picture/web design.jpg')">View</button>
+        </div>
+    </div>
+
+    <div class="skill-box">
+        <div class="skill-text">
+            <strong>MS Office</strong>
+            <span class="skill-desc">
+                Proficient in Word and PowerPoint for professional documentation.
+            </span>
+            <button onclick="openImage('picture/microsoft office.png')">View</button>
+        </div>
+    </div>
+
+    <div class="skill-box">
+        <div class="skill-text">
+            <strong>System Management</strong>
+            <span class="skill-desc">
+                Analyzing and organizing information system workflows for efficiency.
+            </span>
+            <button onclick="openImage('picture/gym system management.jpg')">View</button>
+        </div>
+    </div>
+
+    <div class="skill-box">
+        <div class="skill-text">
+            <strong>MS Excel</strong>
+            <span class="skill-desc">
+                Expertise in data analysis, formulas, and organizing complex datasets.
+            </span>
+            <button onclick="openImage('picture/microsoft excel.png')">View</button>
+        </div>
+    </div>
+</div> 
+
+</main>
+
+</section>
+       
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2025 NUR DAMIA. All rights reserved.</p>
+        <p>
+            <a href="mailto:ndamia87@gmail.com">Email</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+
+</html> 
